@@ -1,0 +1,40 @@
+---
+import white from '../assets/Group 2.svg';
+import pink from '../assets/LWPOLYLINE(1).svg';
+import blue from '../assets/LWPOLYLINE.svg';
+import green from '../assets/ARC.svg';
+
+const {title, colour}=Astro.props;
+
+const iconMap = {
+  white: white,
+  pink: pink,
+  blue: blue,
+  green: green
+};
+const selectedIcon = iconMap[colour];
+---
+<button aria-label={title} class="button">
+      <img src={selectedIcon.src}  alt="" role="presentation" />
+      {title}
+</button>
+
+<style>
+  .button {
+    background-color: #D6E6E5 ;
+    color: #8DA91C;
+    display: inline-flex;
+    align-items: center;
+    border:none;
+    text-align: center;
+    width:fit-content;
+    gap:30%;
+    margin:0px;
+  }
+
+
+  .button img {
+    width: 20%;
+    height: auto;
+  }
+</style>
