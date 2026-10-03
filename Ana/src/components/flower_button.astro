@@ -4,7 +4,7 @@ import pink from '../assets/LWPOLYLINE(1).svg';
 import blue from '../assets/LWPOLYLINE.svg';
 import green from '../assets/ARC.svg';
 
-const {title, colour}=Astro.props;
+const {title, colour,link}=Astro.props;
 
 const iconMap = {
   white: white,
@@ -14,10 +14,10 @@ const iconMap = {
 };
 const selectedIcon = iconMap[colour];
 ---
-<button aria-label={title} class="button">
+<a aria-label={title} class="button" href={link};>
       <img src={selectedIcon.src}  alt="" role="presentation" />
-      {title}
-</button>
+      <b> {title}</b>
+</a>
 
 <style>
   .button {
@@ -28,13 +28,14 @@ const selectedIcon = iconMap[colour];
     border:none;
     text-align: center;
     width:fit-content;
-    gap:30%;
-    margin:0px;
+    gap:10px;
+    margin:10px;
+    text-decoration-line: none;
+    
   }
 
-
   .button img {
-    width: 20%;
+    width: 50PX;
     height: auto;
   }
 </style>

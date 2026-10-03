@@ -1,0 +1,59 @@
+---
+import white from '../assets/Group 2.svg';
+import green from '../assets/ARC.svg';
+---
+<div class="Name">
+  <div class="name-box">
+    <img src={green.src} class="flower top-left"/>
+    <img src={white.src} class="flower top-right"/>
+    <img src={green.src} class="flower bottom-left"/>
+    <img src={white.src} class="flower bottom-right"/>
+    <h1>Ana Bilhoto</h1>
+  </div>
+</div>
+
+<style>
+  .Name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing:border-box;
+  }
+  .name-box {
+    position: relative;
+    display: inline-block;
+    padding: 100px 100px; 
+  }
+  .flower {
+    position: absolute;
+    width: 80PX; 
+    height: auto;
+  }
+
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+
+  .top-right {
+    top: 0;
+    right: 0;
+  }
+
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+
+  h1 {
+    margin: 0;
+    color: #FF7C9A;
+    text-align: center;
+  }
+</style>
+

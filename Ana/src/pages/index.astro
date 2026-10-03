@@ -1,13 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Wel from '../components/flower_button.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Name from '../components/name.astro';
 ---
 
 <Layout>
-	
-	<Wel colour="white" title="love"/>
+	<div class="buttons">
+	<Wel colour="pink" title="Curriculum" link="/Group 1.svg"/>
+	</div>
+	<Name/>
 </Layout>
+
+<style>
+.buttons{
+	position: absolute;
+	right:0;
+	top:0;
+}
+</style>
