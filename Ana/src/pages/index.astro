@@ -2,6 +2,8 @@
 import Wel from '../components/flower_button.astro';
 import Layout from '../layouts/Layout.astro';
 import Name from '../components/name.astro';
+import Contact from '../components/contacts.astro';
+
 ---
 
 <Layout>
@@ -9,6 +11,10 @@ import Name from '../components/name.astro';
 	<Wel colour="pink" title="Curriculum" link="/Group 1.svg"/>
 	</div>
 	<Name/>
+	<div class="socials">
+		<Contact app="git" link="https://github.com/Belem17"/>
+		<Contact app="linkedin" link="https://www.linkedin.com/in/ana-bilhoto-a56b532b5"/>
+	</div>
 </Layout>
 
 <style>
@@ -16,5 +22,16 @@ import Name from '../components/name.astro';
 	position: absolute;
 	right:0;
 	top:0;
+}
+
+.socials{
+	position:absolute;
+	bottom:0;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:  space-around;
+	width:100%;
+
 }
 </style>

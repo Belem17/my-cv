@@ -1,0 +1,41 @@
+---
+import git from '../assets/github.png';
+import linkedin from '../assets/linkedin.png';
+
+const {app,link}=Astro.props;
+
+const iconMap = {
+  linkedin: linkedin,
+  git: git,
+
+};
+const selectedIcon = iconMap[app];
+---
+<a aria-label={app} class="app" href={link}>
+      <img src={selectedIcon.src} class="icon"  alt="" role="presentation" />
+</a>
+
+<style>
+  .app {
+    border:none;
+    width:fit-content;
+    gap:10px;
+    margin:10px;
+    text-decoration-line: none;
+    display: inline-block; 
+    
+  }
+  .icon{
+    width:40px;
+    height:auto;
+  }
+   @media (min-width: 600px) {
+      .icon{
+      width:50px;
+      height:auto;
+      }
+    }
+
+
+
+</style>
